@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th{
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="wrapper">
+        <div class="sidebar"></div>
+        <div class="content">
+            <table class="table" id="table">
+                <thead>
+                  <tr id="header">
+                    <th>Header content 1</th>
+                    <th>Header content 2</th>
+                  </tr>
+                </thead>
+                <tbody id="table_body">
+                  <tr>
+                    <td>Body content 1</td>
+                    <td>Body content 2</td>
+                  </tr>
+                  <tr>
+                    <td>Body content 1</td>
+                    <td>Body content 2</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Footer content 1</td>
+                    <td>Footer content 2</td>
+                  </tr>
+                </tfoot>
+              </table>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var test =
+    [
+{
+    company: 'Infobip China',
+    customer: 'Filip',
+    fiscalYear: 2019,
+    documentNumber: 'doc1',
+    documentType: 'Invoice',
+    documentStatus: 'Todo',
+    bank: 'Hypo',
+    documentPeriod: '10.02.2020',
+    amount: 5000,
+    currency: 'HRK',
+    due: 'today',
+    service: 'SMS',
+    isPaid: true
+},
+{
+    company: 'Infobip China',
+    customer: 'Ivana',
+    fiscalYear: 2049,
+    documentNumber: 'doc2',
+    documentType: 'Invoice',
+    documentStatus: 'In process',
+    bank: 'PBZ',
+    documentPeriod: '10.02.2015',
+    amount: 100,
+    currency: 'GBP',
+    due: 'today',
+    service: 'Voice',
+    isPaid: false
+},
+{
+    company: 'Infobip China',
+    customer: 'Marko',
+    fiscalYear: 2018,
+    documentNumber: 'doc3',
+    documentType: 'Proforma Invoice',
+    documentStatus: 'Done',
+    bank: 'Erste',
+    documentPeriod: '10.02.2023',
+    amount: 1234,
+    currency: 'EUR',
+    due: '240',
+    service: 'SMS',
+    isPaid: true
+},
+{
+    company: 'Infobip China',
+    customer: 'Matea',
+    fiscalYear: 2020,
+    documentNumber: 'doc4',
+    documentType: 'Invoice',
+    documentStatus: 'In process',
+    bank: 'OTP',
+    documentPeriod: '10.02.2019',
+    amount: 5000,
+    currency: 'USD',
+    due: '15-30',
+    service: 'Viber',
+    isPaid: true
+},
+]
+
+var keys = Object.keys(this.test[0]);
+    var header = document.getElementById('table');
+    var headerMaker = '';
+    keys.forEach(function(el){
+        console.log(el);
+        this.headerMaker += "<th>"+el+"</th>";
+    });
+    header.innerHTML = headerMaker;
+    var table = document.getElementById('table');
+    console.log(table);
+    test.forEach(function(el){
+        var objectValues = Object.values(el);
+        var row = '<tbody><tr>';
+        objectValues.forEach(function(value){
+            this.row += '<td>'+value+'</td>';
+        });
+        row+='</tr></tbody>';
+        this.table.appendChild(row);
+    });
+</script>

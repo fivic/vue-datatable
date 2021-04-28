@@ -1,0 +1,82 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+    margin: 2rem 0;
+}
+
+.sidebar{
+    width: 20%;
+    min-height:100%;
+    margin-right: 50px;
+    > div{
+        margin-bottom: 20px;
+    }
+}
+
+.content{
+    width: auto;
+    min-height: 100%;
+    // border: 1px solid red;
+    display: flex;
+}
+
+.flex{
+    display: flex;
+}
+
+.bg-orange{
+    background-color: #f6ad55;
+    color: #1e3c66 !important;
+}
+
+.bg-blue{
+    background-color: #4299e1;
+}
+
+.bg-green{
+    background-color: #48bb78;
+}
+
+.bg-purple{
+    background-color: #9f7aea;
+}
+
+.status{
+    padding: 8px;
+    // border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+.h-2 {
+    height: 2rem;
+}
+
+.w-2 {
+    width: 2rem;
+}
+.h-1 {
+    height: 0.6rem;
+}
+
+.w-1 {
+    width: 0.6rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.self-align-cenetr{
+    align-self: center;
+}
